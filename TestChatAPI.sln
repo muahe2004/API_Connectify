@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35219.272
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestChatAPI", "TestChatAPI\TestChatAPI.csproj", "{38F2CF88-699B-434C-92B9-580B13CF4255}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{38F2CF88-699B-434C-92B9-580B13CF4255}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{38F2CF88-699B-434C-92B9-580B13CF4255}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{38F2CF88-699B-434C-92B9-580B13CF4255}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{38F2CF88-699B-434C-92B9-580B13CF4255}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B4B1BBFA-1B53-4212-88DA-1BCA8E0FE919}
+	EndGlobalSection
+EndGlobal

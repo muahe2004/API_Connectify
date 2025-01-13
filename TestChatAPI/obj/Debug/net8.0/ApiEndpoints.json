@@ -1,0 +1,70 @@
+[
+  {
+    "ContainingType": "TestChatAPI.Controllers.Posts_Controller",
+    "Method": "GetAllPostsAsync",
+    "RelativePath": "api/Posts_",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TestChatAPI.Controllers.Posts_Controller",
+    "Method": "AddPostAsync",
+    "RelativePath": "api/Posts_",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "post",
+        "Type": "TestChatAPI.Model.Posts_Model\u002BPost_Add",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TestChatAPI.Controllers.Posts_Controller",
+    "Method": "UpdatePostAsync",
+    "RelativePath": "api/Posts_",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "post",
+        "Type": "TestChatAPI.Model.Posts_Model\u002BPost_Update",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TestChatAPI.Controllers.Posts_Controller",
+    "Method": "DeletePostAsync",
+    "RelativePath": "api/Posts_",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "postID",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TestChatAPI.Controllers.User_Controller",
+    "Method": "GetAllUserAsync",
+    "RelativePath": "api/User_",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  }
+]
