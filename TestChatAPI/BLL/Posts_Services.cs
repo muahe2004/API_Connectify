@@ -12,9 +12,9 @@ namespace TestChatAPI.BLL
 			_postRepo = postsRepo;
 		}
 
-		public async Task<Posts_Model.Post_Add> AddPostAsync(Posts_Model.Post_Add post)
+		public async Task<Posts_Model.PostWithImageResponse> AddPostWithImageAsync(Posts_Model.Post_Add post, Posts_Model.PostImage postImage)
 		{
-			return await _postRepo.AddPostAsync(post);
+			return await _postRepo.AddPostWithImageAsync(post, postImage);
 		}
 
 		public async Task<bool> DeletePostAsync(int postID)

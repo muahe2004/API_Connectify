@@ -26,5 +26,17 @@ namespace TestChatAPI.Model
 			[StringLength(500, ErrorMessage = "Content không được vượt quá 500 ký tự.")]
 			public string Content { get; set; }
 		}
-	}
+		public class PostImage
+		{
+			public int PostID { get; set; }
+			public string ImageURL { get; set; }
+		}
+
+        public class PostWithImageResponse
+        {
+            public Post_Add Post { get; set; }
+            public PostImage PostImage { get; set; }
+        }
+
+    }
 }

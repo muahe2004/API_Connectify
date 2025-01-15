@@ -1,5 +1,74 @@
 [
   {
+    "ContainingType": "TestChatAPI.Controllers.Messages_Controller",
+    "Method": "UpdateMessageAsync",
+    "RelativePath": "api/Messages_",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "message",
+        "Type": "TestChatAPI.Model.Messages_Model\u002BMessage_Update",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TestChatAPI.Controllers.Messages_Controller",
+    "Method": "DeleteMessagesAsync",
+    "RelativePath": "api/Messages_",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "messID",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TestChatAPI.Controllers.Messages_Controller",
+    "Method": "GetMessageBoxChatAsync",
+    "RelativePath": "api/Messages_/GetMessageBoxChatAsync",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "SenderID",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "ReceiverID",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TestChatAPI.Controllers.Messages_Controller",
+    "Method": "SendMessageAsync",
+    "RelativePath": "api/Messages_/SendMessage",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "message",
+        "Type": "TestChatAPI.Model.Messages_Model\u002BMessage_Add",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "TestChatAPI.Controllers.Posts_Controller",
     "Method": "GetAllPostsAsync",
     "RelativePath": "api/Posts_",
@@ -7,22 +76,6 @@
     "IsController": true,
     "Order": 0,
     "Parameters": [],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "TestChatAPI.Controllers.Posts_Controller",
-    "Method": "AddPostAsync",
-    "RelativePath": "api/Posts_",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "post",
-        "Type": "TestChatAPI.Model.Posts_Model\u002BPost_Add",
-        "IsRequired": true
-      }
-    ],
     "ReturnTypes": []
   },
   {
@@ -58,13 +111,167 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "TestChatAPI.Controllers.Posts_Controller",
+    "Method": "AddPostWithImage",
+    "RelativePath": "api/Posts_/add-post-with-image",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "UserID",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Content",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "imageFile",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "TestChatAPI.Controllers.User_Controller",
     "Method": "GetAllUserAsync",
-    "RelativePath": "api/User_",
+    "RelativePath": "api/User_/Get_All_User",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TestChatAPI.Controllers.User_Controller",
+    "Method": "GetUserByUserName",
+    "RelativePath": "api/User_/Get_By_UserName",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userName",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TestChatAPI.Controllers.User_Controller",
+    "Method": "Login",
+    "RelativePath": "api/User_/Login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "loginRequest",
+        "Type": "TestChatAPI.Model.User_Model\u002BLogin",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TestChatAPI.Controllers.User_Controller",
+    "Method": "Create",
+    "RelativePath": "api/User_/user/create",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "user",
+        "Type": "TestChatAPI.Model.User_Model\u002BUser",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TestChatAPI.Controllers.User_Controller",
+    "Method": "Delete",
+    "RelativePath": "api/User_/user/delete",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userID",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TestChatAPI.Controllers.User_Controller",
+    "Method": "Follower",
+    "RelativePath": "api/User_/user/follower",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userID",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TestChatAPI.Controllers.User_Controller",
+    "Method": "Following",
+    "RelativePath": "api/User_/user/following",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userID",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TestChatAPI.Controllers.User_Controller",
+    "Method": "Friendship",
+    "RelativePath": "api/User_/user/friendship",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userID",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TestChatAPI.Controllers.User_Controller",
+    "Method": "Update",
+    "RelativePath": "api/User_/user/update",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "user",
+        "Type": "TestChatAPI.Model.User_Model\u002BUser",
+        "IsRequired": true
+      }
+    ],
     "ReturnTypes": []
   }
 ]

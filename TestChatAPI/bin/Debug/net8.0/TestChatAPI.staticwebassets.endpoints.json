@@ -1,0 +1,88 @@
+{
+  "Version": 1,
+  "ManifestType": "Build",
+  "Endpoints": [
+    {
+      "Route": "images/angle-right.png",
+      "AssetFile": "images/angle-right.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3585"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"rm1J7pwD60ONeSJbLfypsOJRQtidsBHOXdIRqG7FbYY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 15 Jan 2025 09:41:41 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-rm1J7pwD60ONeSJbLfypsOJRQtidsBHOXdIRqG7FbYY="
+        }
+      ]
+    },
+    {
+      "Route": "images/angle-right.qmuhxfguw8.png",
+      "AssetFile": "images/angle-right.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3585"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"rm1J7pwD60ONeSJbLfypsOJRQtidsBHOXdIRqG7FbYY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 15 Jan 2025 09:41:41 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "qmuhxfguw8"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-rm1J7pwD60ONeSJbLfypsOJRQtidsBHOXdIRqG7FbYY="
+        },
+        {
+          "Name": "label",
+          "Value": "images/angle-right.png"
+        }
+      ]
+    }
+  ]
+}

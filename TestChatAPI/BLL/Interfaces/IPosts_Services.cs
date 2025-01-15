@@ -5,8 +5,9 @@ namespace TestChatAPI.BLL.Interfaces
 	public interface IPosts_Services
 	{
 		Task<IEnumerable<Post>> GetAllPostAsync();
-		Task<Post_Add> AddPostAsync(Post_Add post);
-		Task<Post_Update> UpdatePostAsync(Post_Update post);
+		Task<PostWithImageResponse> AddPostWithImageAsync(Post_Add post, PostImage postImage);
+
+        Task<Post_Update> UpdatePostAsync(Post_Update post);
 		Task<bool> DeletePostAsync(int postID);
 	}
 }

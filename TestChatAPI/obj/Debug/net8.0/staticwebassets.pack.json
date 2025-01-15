@@ -1,0 +1,29 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\Admin\\Documents\\Zalo Received Files\\API_Connectify (1)\\API_Connectify\\TestChatAPI\\wwwroot\\images\\angle-right.png",
+      "PackagePath": "staticwebassets\\images\\angle-right.png"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.TestChatAPI.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.TestChatAPI.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.TestChatAPI.props",
+      "PackagePath": "build\\TestChatAPI.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.TestChatAPI.props",
+      "PackagePath": "buildMultiTargeting\\TestChatAPI.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.TestChatAPI.props",
+      "PackagePath": "buildTransitive\\TestChatAPI.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

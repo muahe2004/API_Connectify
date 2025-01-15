@@ -15,18 +15,29 @@ namespace TestChatAPI.DAL
 			connect_SQL = new Connect_SQL(str_Con);
 		}
 
-		public async Task<Post_Add> AddPostAsync(Post_Add post)
-		{
-			SqlParameter[] parameters = new SqlParameter[] 
-			{
+        public async Task<PostWithImageResponse> AddPostWithImageAsync(Post_Add post, PostImage postImage)
+        {
+            // Chuẩn bị tham số cho stored procedure
+            SqlParameter[] parameters = new SqlParameter[]
+            {
 				new SqlParameter("@UserID", post.UserID),
-				new SqlParameter("@Content", post.Content)
-			};
-			await connect_SQL.ExecuteNonQueryAsync("sp_Add_Post", parameters);
-			return post;
-		}
+				new SqlParameter("@Content", post.Content),
+				new SqlParameter("@ImageURL", postImage.ImageURL ?? (object)DBNull.Value) // Đảm bảo truyền giá trị null nếu không có URL
+            };
 
-		public async Task<bool> DeletePostAsync(int postID)
+            // Thực thi stored procedure
+            await connect_SQL.ExecuteNonQueryAsync("sp_AddPostWithImage", parameters);
+
+            // Trả về đối tượng bài viết với ảnh đã được thêm
+            return new PostWithImageResponse
+            {
+                Post = post,
+                PostImage = postImage
+            };
+        }
+
+
+        public async Task<bool> DeletePostAsync(int postID)
 		{
 			SqlParameter[] parameters = new SqlParameter[]
 			{

@@ -1,11 +1,125 @@
 {
   "Version": 1,
-  "Hash": "O3KUrKOhrvB9GeFMab0NsZnaKG8lipA1sqcDb/tp4/A=",
+  "Hash": "lzgnPa4HP44aJaDxb9qcg/ZXuftqBimIdV9BMzXoDWA=",
   "Source": "TestChatAPI",
   "BasePath": "_content/TestChatAPI",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
-  "Assets": []
+  "DiscoveryPatterns": [
+    {
+      "Name": "TestChatAPI\\wwwroot",
+      "Source": "TestChatAPI",
+      "ContentRoot": "C:\\Users\\Admin\\Documents\\Zalo Received Files\\API_Connectify (1)\\API_Connectify\\TestChatAPI\\wwwroot\\",
+      "BasePath": "_content/TestChatAPI",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\Admin\\Documents\\Zalo Received Files\\API_Connectify (1)\\API_Connectify\\TestChatAPI\\wwwroot\\images\\angle-right.png",
+      "SourceId": "TestChatAPI",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Admin\\Documents\\Zalo Received Files\\API_Connectify (1)\\API_Connectify\\TestChatAPI\\wwwroot\\",
+      "BasePath": "_content/TestChatAPI",
+      "RelativePath": "images/angle-right#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "qmuhxfguw8",
+      "Integrity": "rm1J7pwD60ONeSJbLfypsOJRQtidsBHOXdIRqG7FbYY=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\angle-right.png"
+    }
+  ],
+  "Endpoints": [
+    {
+      "Route": "images/angle-right.png",
+      "AssetFile": "C:\\Users\\Admin\\Documents\\Zalo Received Files\\API_Connectify (1)\\API_Connectify\\TestChatAPI\\wwwroot\\images\\angle-right.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3585"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"rm1J7pwD60ONeSJbLfypsOJRQtidsBHOXdIRqG7FbYY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 15 Jan 2025 09:41:41 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-rm1J7pwD60ONeSJbLfypsOJRQtidsBHOXdIRqG7FbYY="
+        }
+      ]
+    },
+    {
+      "Route": "images/angle-right.qmuhxfguw8.png",
+      "AssetFile": "C:\\Users\\Admin\\Documents\\Zalo Received Files\\API_Connectify (1)\\API_Connectify\\TestChatAPI\\wwwroot\\images\\angle-right.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3585"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"rm1J7pwD60ONeSJbLfypsOJRQtidsBHOXdIRqG7FbYY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 15 Jan 2025 09:41:41 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "qmuhxfguw8"
+        },
+        {
+          "Name": "label",
+          "Value": "images/angle-right.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-rm1J7pwD60ONeSJbLfypsOJRQtidsBHOXdIRqG7FbYY="
+        }
+      ]
+    }
+  ]
 }

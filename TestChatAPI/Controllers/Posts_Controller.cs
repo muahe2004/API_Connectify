@@ -28,22 +28,59 @@ namespace TestChatAPI.Controllers
 				return Ok(Posts);
 			}
 		}
-		[HttpPost]
-		public async Task<IActionResult> AddPostAsync(Post_Add post)
-		{
-			var addedPost = await _posts_Services.AddPostAsync(post);
+        // Phương thức để thêm bài viết và hình ảnh
+        [HttpPost("add-post-with-image")]
+        public async Task<IActionResult> AddPostWithImage([FromForm] Post_Add postRequest, IFormFile imageFile)
+        {
+            if (postRequest == null || string.IsNullOrEmpty(postRequest.Content))
+            {
+                return BadRequest("Dữ liệu không hợp lệ.");
+            }
 
-			if (addedPost == null)
-			{
-				return NotFound("No post found.");
-			} 
-			else
-			{
-				return Ok(addedPost);
-			}
-		}
+            if (imageFile == null || imageFile.Length == 0)
+            {
+                return BadRequest("Cần phải chọn một hình ảnh.");
+            }
 
-		[HttpPut] 
+            // Lưu hình ảnh vào thư mục trên server và lấy URL của hình ảnh
+            var imageURL = await SaveImageAsync(imageFile);
+
+            // Tạo đối tượng Post_Add và PostImage từ dữ liệu nhận được
+            var post = new Post_Add
+            {
+                UserID = postRequest.UserID,
+                Content = postRequest.Content
+            };
+
+            var postImage = new PostImage
+            {
+                ImageURL = imageURL
+            };
+
+            // Gọi phương thức thêm bài viết và hình ảnh
+            var addedPost = await _posts_Services.AddPostWithImageAsync(post, postImage);
+
+            // Trả về kết quả thêm bài viết
+            //return Ok(addedPost);
+            // Trả về đối tượng PostWithImageResponse
+            return Ok(new { Post = addedPost, PostImage = postImage });
+        }
+
+        // Lưu hình ảnh lên server và trả về đường dẫn URL của hình ảnh
+        private async Task<string> SaveImageAsync(IFormFile imageFile)
+        {
+            var filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "images", imageFile.FileName);
+
+            using (var stream = new FileStream(filePath, FileMode.Create))
+            {
+                await imageFile.CopyToAsync(stream);
+            }
+
+            // Trả về URL của hình ảnh
+            return $"http://localhost:44328/images/{imageFile.FileName}";
+        }
+
+        [HttpPut] 
 		public async Task<IActionResult> UpdatePostAsync(Post_Update post)
 		{
 			var updatedPost = await _posts_Services.UpdatePostAsync(post);
